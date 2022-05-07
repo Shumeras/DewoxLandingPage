@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: "Bw Gradual";
+    src: url(res/font/BwGradual-Light.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bw Gradual";
+    src: url(res/font/BwGradual-LightItalic.otf);
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bw Gradual";
+    src: url(res/font/BwGradual-Regular.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bw Gradual";
+    src: url(res/font/BwGradual-RegularItalic.otf);
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bw Gradual";
+    src: url(res/font/BwGradual-Bold.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bw Gradual";
+    src: url(res/font/BwGradual-BoldItalic.otf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+html{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Bw Gradual', 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+svg {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+main{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.logo-container{
+
+    height: 70%;
+    width: 100%;
+    align-self: center;
+}
+
+.text-container{
+    width: 100%;
+}
+
+
+img{
+    height: 100%;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation: float 20s ease-in-out infinite;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 200%;
+}
+
+strong{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #e5562c;
+
+}
+
+.buble{
+    animation-name: bubleFloat;
+    animation-duration: 10s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(25px);
+    }
+    50% {
+        transform: translatey(-25px);
+    }
+    100% {
+        transform: translatey(25px);
+    }
+}
+
+@keyframes bubleFloat {
+    0%{
+        transform: translate(0, 0px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, -3200px);
+        opacity: 0;   
+    }
+    
+}
